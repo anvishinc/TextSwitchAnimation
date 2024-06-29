@@ -1,0 +1,26 @@
+.words_animate    {
+    position: absolute;
+    opacity: 0;
+}
+
+.words_animate_letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.words_animate_letter.animate_out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.words_animate_letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.words_animate_letter.animate_in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
